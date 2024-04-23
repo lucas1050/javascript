@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Texto</title>
+</head>
+<body>
+
+
+<p id="meuTexto" style="display:none;">Texto exibido!</p>
+<input type="button" value="botao" id="meuBotao" onclick="exibirTexto">
+<input type="text" name="txt" id="txt">
+<div id="res">
+
+</div>
+<script>
+  function exibirTexto() {
+    var txt = window.document.getElementById('txt')
+    var pais = (txt.value)
+    var textoElement = document.getElementById('meuTexto');
+    var res = window.document.getElementById('res')
+    textoElement.style.display = 'block';
+    if (textoElement == 'Brasil') {
+      res.innerHTML += `<p>Voce e Brasileiro</p>`
+    } else {
+      res.innerHTML += `<p>Voce e estrangeiro</p>`
+    }
+    
+  }
+  document.getElementById('meuBotao')('click', exibirTexto);
+</script>
+
+</body>
+</html>

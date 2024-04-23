@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu pais</title>
+</head>
+<body>
+    <h1>Qual e o seu pais?</h1>
+    <input type="text" name="textt" id="textt">
+    <input type="button" value="Verificar" onclick="verific()" id="meuBotao">
+    <div id="res">
+    </div>
+    <script>
+
+function verific() {
+            var txt = window.document.getElementById('textt')
+            var pais = text(txt.value)
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `Sua velocidade atual é de <strong>${pais}Km/h</strong>`
+            if (pais == 'Brasil') {
+                res.innerHTML += `<p>vc e Brasileiro</p>`
+            } else {
+                res.innerHTML += `<p>Você e estrangeiro</p>`
+            }
+            res.innerHTML += `<p>Obigado por responder</p>`
+        }
+
+        document.getElementById('meuBotao').addEventListener('click', exibirTexto);
+
+        /* function verific() {
+            var txt = window.document.getElementById('textt')
+            var res = window.document.querySelector('div#res')
+            var pais = text(textt.value)
+            res.innerHTML = `Seu pais e ${pais}`
+            if (pais == 'Brasil!') {
+                res.innerHTML += `<p>Voce e Brasileiro</p>`
+            } else {
+                res.innerHTML += `<p>Você e estrangeiro</p>`
+            }
+            res.innerHTML += `<p>Obigado por responder</p>`
+        }
+        */
+        
+    </script>
+</body>
+</html>
